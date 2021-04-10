@@ -53,7 +53,9 @@ class MyRequest extends HttpServletRequestWrapper {
 			} catch (UnsupportedEncodingException e) {
 				e.printStackTrace();
 			}
-		} else if (method.equalsIgnoreCase("get")) {
+		} 
+		/*
+		else if (method.equalsIgnoreCase("get")) {
 			// get请求
 			Map<String, String[]> parameterMap = request.getParameterMap();
 			if (!hasEncode) { // 确保get手动编码逻辑只运行一次
@@ -73,6 +75,7 @@ class MyRequest extends HttpServletRequestWrapper {
 			}
 			return parameterMap;
 		}
+		*/
 		return super.getParameterMap();
 	}
 	@Override
